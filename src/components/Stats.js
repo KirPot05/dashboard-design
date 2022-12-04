@@ -1,5 +1,7 @@
 import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { Area } from "./charts/Area";
+import { BarChart } from "./charts/Bar";
 import Badge from "./common/Badge";
 
 function Stats() {
@@ -35,6 +37,8 @@ function Stats() {
             <span className="text-4xl font-semibold"> 94.2% </span>
             <Badge content="+6.9%" />
           </p>
+
+          <BarChart />
         </div>
       </div>
 
@@ -69,6 +73,8 @@ function Stats() {
             </div>
           </div>
         </div>
+
+        <Area />
       </div>
     </div>
   );
