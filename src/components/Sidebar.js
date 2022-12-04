@@ -37,7 +37,7 @@ function Sidebar({ link, setLink }) {
       />
 
       {/* Utils Section */}
-      <NavList heading="" links={utilLinks} />
+      <NavList heading="" links={utilLinks} link={link} setLink={setLink} />
     </div>
   );
 }
