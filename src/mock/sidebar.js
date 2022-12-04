@@ -8,6 +8,7 @@ import {
   InboxIcon,
   ListBulletIcon,
   QuestionMarkCircleIcon,
+  Square2StackIcon,
   Squares2X2Icon,
   UsersIcon,
 } from "@heroicons/react/24/outline";
@@ -16,7 +17,7 @@ export const mainLinks = [
   {
     title: "Dashboard",
     url: "/",
-    icon: GlobeAltIcon,
+    icon: Square2StackIcon,
   },
   {
     title: "Discover",

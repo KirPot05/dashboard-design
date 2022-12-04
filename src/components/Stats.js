@@ -1,5 +1,4 @@
 import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { Area } from "./charts/Area";
 import { BarChart } from "./charts/Bar";
 import Badge from "./common/Badge";
@@ -57,7 +56,7 @@ function Stats() {
 
         <div className="flex items-center justify-between p-4">
           <div className="border-2 p-3 rounded">
-            <h5>Earnings</h5>
+            <h5 className="text-gray-500 text-sm font-semibold">Earnings</h5>
             <div className="flex items-center space-x-2">
               <p className="font-semibold text-3xl">43.41%</p>
               <Badge content="+2.5%" />
@@ -65,7 +64,7 @@ function Stats() {
           </div>
 
           <div className="border-2 p-3 rounded">
-            <h5>Sales Value</h5>
+            <h5 className="text-gray-500 text-sm font-semibold">Sales Value</h5>
             <div className="flex items-center space-x-2">
               <p className="font-semibold text-3xl">$95,522</p>
               <Badge content="+13.5%" />
