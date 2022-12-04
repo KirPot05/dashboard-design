@@ -12,7 +12,7 @@ function Stats() {
         <div className="bg-white p-3 space-y-3 rounded shadow">
           <div className="flex items-center justify-between text-gray-500">
             <h4 className="font-semibold"> Total Income </h4>
-            <EllipsisHorizontalIcon className="w-6 h-6" />
+            <EllipsisHorizontalIcon className="w-6 h-6 cursor-pointer" />
           </div>
           <p className="flex items-center space-x-2">
             {" "}
@@ -30,7 +30,7 @@ function Stats() {
         <div className="bg-white p-3 space-y-3 rounded shadow">
           <div className="flex items-center justify-between text-gray-500">
             <h4 className="font-semibold"> New Users </h4>
-            <EllipsisHorizontalIcon className="w-6 h-6" />
+            <EllipsisHorizontalIcon className="w-6 h-6 cursor-pointer" />
           </div>
           <div className="flex items-center space-x-2">
             {" "}
@@ -46,12 +46,11 @@ function Stats() {
       <div className="bg-white">
         <div className="p-4 flex items-center justify-between">
           <h4 className="font-semibold text-2xl">Balance</h4>
-
-          {/* custom select option */}
-          <div className="flex items-center space-x-1 text-gray-600 text-sm border-2 px-3 py-1 rounded">
-            <span>Monthly</span>
-            <ChevronDownIcon className="h-4 w-4" />
-          </div>
+          <select className="border-2 text-gray-600 text-sm px-3 py-1 rounded cursor-pointer outline-none">
+            <option value="">Weekly</option>
+            <option value="">Monthly</option>
+            <option value=""> Yearly </option>
+          </select>
         </div>
 
         <hr />
