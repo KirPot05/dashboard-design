@@ -2,7 +2,7 @@ import React from "react";
 import { mainLinks, secondaryLinks, utilLinks } from "../mock/sidebar";
 import NavList from "./common/NavList";
 
-function Sidebar() {
+function Sidebar({ link, setLink }) {
   return (
     <div className="bg-white p-2 w-1/5 min-h-screen">
       {/* Header */}
@@ -19,10 +19,22 @@ function Sidebar() {
 
       <hr />
       {/* Primary Section */}
-      <NavList heading="MAIN" links={mainLinks} nestedLinks />
+      <NavList
+        heading="MAIN"
+        links={mainLinks}
+        nestedLinks
+        link={link}
+        setLink={setLink}
+      />
 
       {/* Secondary Section */}
-      <NavList heading="SECONDARY" links={secondaryLinks} nestedLinks />
+      <NavList
+        heading="SECONDARY"
+        links={secondaryLinks}
+        nestedLinks
+        link={link}
+        setLink={setLink}
+      />
 
       {/* Utils Section */}
       <NavList heading="" links={utilLinks} />

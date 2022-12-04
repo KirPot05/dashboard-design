@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 
-function NavList({ heading, links, nestedLinks }) {
+function NavList({ heading, links, nestedLinks, link, setLink }) {
   return (
     <div className="p-2 my-2 ">
       <h3 className="font-semibold text-gray-400 text-sm my-2">{heading}</h3>
@@ -10,7 +10,8 @@ function NavList({ heading, links, nestedLinks }) {
           <Link
             to={url}
             key={title}
-            id={window.location.pathname === url && "link-active"}
+            id={link === url ? "link-active" : undefined}
+            onClick={() => setLink(url)}
             className="flex items-center justify-between text-gray-500 rounded-lg font-semibold p-2"
           >
             <p className="flex items-center space-x-3">

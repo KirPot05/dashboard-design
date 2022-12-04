@@ -28,7 +28,7 @@ function DataTable({ columns }) {
           </p>
           <p>08.04.2021</p>
           <p>Code 5928MD01</p>
-          <p>
+          <p className="flex items-center">
             {" "}
             <Badge content="Completed" />{" "}
           </p>
