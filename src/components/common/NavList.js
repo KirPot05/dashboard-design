@@ -10,10 +10,8 @@ function NavList({ heading, links, nestedLinks }) {
           <Link
             to={url}
             key={title}
-            className={`flex items-center justify-between text-gray-500 font-semibold p-2 ${
-              window.location.pathname === url &&
-              "bg-blue-600 text-white rounded-lg"
-            }`}
+            id={window.location.pathname === url && "link-active"}
+            className="flex items-center justify-between text-gray-500 rounded-lg font-semibold p-2"
           >
             <p className="flex items-center space-x-3">
               <Icon className="w-5 h-5" />

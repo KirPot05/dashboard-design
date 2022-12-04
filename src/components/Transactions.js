@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import { ChevronUpDownIcon } from "@heroicons/react/24/outline";
+import { ArrowUpTrayIcon } from "@heroicons/react/24/outline";
+import DataTable from "./common/DataTable";
 
 function Transactions() {
-  const [data, setData] = useState([]);
-
   const columns = [
     "Invoice ID",
     "Date",
@@ -13,33 +11,27 @@ function Transactions() {
   ];
 
   return (
-    <div className="mt-10 bg-white p-5">
-      <div>
-        <h4>Recent Transactions</h4>
-        <button>Export</button>
+    <div className="mt-10 bg-white">
+      <div className="flex items-center justify-between p-5">
+        <h4 className="text-2xl font-semibold">Recent Transactions</h4>
+        <button className="flex items-center space-x-2 bg-purple-800 p-2 rounded text-white text-sm">
+          <ArrowUpTrayIcon className="h-4 w-4" />
+          <span>Export</span>
+        </button>
       </div>
 
-      <div>
-        <button> Incoming </button>
-        <button> Invoices </button>
+      <div className="space-x-4 border-b-2 px-5">
+        <button className="p-2 font-semibold focus:text-purple-800 focus:border-b-2 focus:border-purple-800">
+          {" "}
+          Incoming{" "}
+        </button>
+        <button className="p-2 font-semibold focus:text-purple-800 border-b-2 border-white focus:border-purple-800">
+          {" "}
+          Invoices{" "}
+        </button>
       </div>
 
-      <table className="w-full">
-        <thead>
-          <tr>
-            {columns.map((col, idx) => (
-              <td>
-                <p className="flex items-center">
-                  {idx === 0 && <input type="checkbox" />}
-                  <span> {col} </span>
-                  <ChevronUpDownIcon className="h-5 w-5" />
-                </p>
-              </td>
-            ))}
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <DataTable columns={columns} />
     </div>
   );
 }

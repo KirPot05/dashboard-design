@@ -6,4 +6,8 @@
     body{
         @apply bg-gray-300;
     }
+
+    #link-active{
+        @apply text-white bg-blue-600
+    }
 }
