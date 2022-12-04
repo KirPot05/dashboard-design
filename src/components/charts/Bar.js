@@ -24,7 +24,7 @@ export const options = {
   plugins: {},
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = Array.from({ length: 8 }).fill("");
 
 export const data = {
   labels,
@@ -32,7 +32,7 @@ export const data = {
     {
       label: "",
       data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "rgba(22, 39, 190, 0.5)",
+      backgroundColor: "rgb(44,112,245)",
     },
   ],
 };

@@ -21,7 +21,7 @@ function Stats() {
           </p>
 
           <div className="bg-gray-300 h-1 w-full relative">
-            <div className="absolute top-0 w-2/3 h-1 bg-purple-800"></div>
+            <div className="absolute top-0 w-2/3 h-1 bg-secondary"></div>
           </div>
           <p className="text-gray-400 text-sm">Yearly Goal</p>
         </div>
@@ -32,11 +32,11 @@ function Stats() {
             <h4 className="font-semibold"> New Users </h4>
             <EllipsisHorizontalIcon className="w-6 h-6" />
           </div>
-          <p className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
             {" "}
             <span className="text-4xl font-semibold"> 94.2% </span>
             <Badge content="+6.9%" />
-          </p>
+          </div>
 
           <BarChart />
         </div>

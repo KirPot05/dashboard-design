@@ -30,12 +30,9 @@ export const options = {
       position: "top",
     },
   },
-  scales: {
-    display: "false",
-  },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
+const labels = Array.from({ length: 8 }).fill("");
 
 export const data = {
   labels,
@@ -44,12 +41,12 @@ export const data = {
       fill: true,
       label: "",
       data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      borderColor: "rgb(133, 37, 197)",
-      backgroundColor: "rgba(133, 37, 197, 0.5)",
+      borderColor: "rgb(56, 43, 219)",
+      backgroundColor: "rgb(238,237,251)",
     },
   ],
 };
 
 export function Area() {
-  return <Line options={options} data={data} />;
+  return <Line className="mt-10" options={options} data={data} />;
 }
